@@ -46,7 +46,7 @@ body{
   padding:20px;
 }
 
-/* BEARS (GLOBAL) */
+/* BEARS */
 .bears{
   display:flex;
   gap:35px;
@@ -60,7 +60,6 @@ h1{
   max-width:90vw;
 }
 
-/* SMALL TEXT FOR LAST PAGES */
 .small-text{
   font-size:2rem;
   line-height:1.5;
@@ -150,7 +149,7 @@ for(let i=0;i<25;i++){
   </div>
 </div>
 
-<!-- COMPLIMENT PAGES -->
+<!-- COMPLIMENTS -->
 <div class="page">
   <div class="center">
     <div class="bears">🐻‍❄️ 🧸</div>
@@ -183,7 +182,7 @@ for(let i=0;i<25;i++){
   </div>
 </div>
 
-<!-- EMOTIONAL PAGE -->
+<!-- EMOTIONAL PAGE (NOW WITH NEXT ✅) -->
 <div class="page">
   <div class="center">
     <div class="bears">🐻‍❄️ 🧸</div>
@@ -192,6 +191,7 @@ for(let i=0;i<25;i++){
       I need you at any cost, no matter what happens.<br><br>
       Your presence is the only thing that heals me now.
     </h1>
+    <button class="yes" onclick="nextPage()">Next</button>
   </div>
 </div>
 
@@ -217,7 +217,7 @@ function nextPage(){
   pages[current].classList.add('active');
 }
 
-/* NO BUTTON ESCAPES UNTIL YES */
+/* NO BUTTON ESCAPES ALWAYS */
 function enableEscape(btn){
   function move(){
     const x=Math.random()*160-80;
