@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>For Rimsha ❤️</title>
+<title>Only For Rimsha ❤️</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -15,65 +15,54 @@
 
 body{
   background:#b0005a; /* DARK PINK */
-  color:#ffffff;      /* WHITE TEXT */
+  color:#ffffff;
   overflow:hidden;
 }
 
-/* Page setup */
+/* PAGE */
 .page{
   position:absolute;
   inset:0;
   display:flex;
-  flex-direction:column;
-  justify-content:center;
   align-items:center;
-  text-align:center;
-  padding:30px;
+  justify-content:center;
   opacity:0;
-  transform:scale(1.05);
-  transition:0.8s ease;
   pointer-events:none;
+  transition:0.6s ease;
 }
 
 .page.active{
   opacity:1;
-  transform:scale(1);
   pointer-events:auto;
 }
 
-/* Text */
-h1{
-  font-size:3.2rem;
-  max-width:900px;
-  line-height:1.4;
-}
-
-/* Bears */
-.bears{
+/* CENTER BLOCK */
+.center{
+  text-align:center;
   display:flex;
-  gap:40px;
-  margin-bottom:30px;
-}
-
-.bear{
-  font-size:5rem;
-  animation:float 4s ease-in-out infinite;
-}
-
-.bear.girl{
-  animation-delay:2s;
-}
-
-@keyframes float{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-15px)}
-}
-
-/* Buttons */
-.buttons{
-  margin-top:40px;
-  display:flex;
+  flex-direction:column;
+  align-items:center;
   gap:30px;
+  padding:20px;
+}
+
+/* TEXT */
+h1{
+  font-size:3rem;
+  line-height:1.35;
+  max-width:90vw;
+}
+
+/* SMALL TEXT FOR LAST PAGE */
+.small-text{
+  font-size:2rem;
+  line-height:1.5;
+}
+
+/* BUTTONS */
+.buttons{
+  display:flex;
+  gap:25px;
   position:relative;
 }
 
@@ -83,7 +72,6 @@ button{
   border:none;
   border-radius:40px;
   cursor:pointer;
-  transition:0.3s;
 }
 
 .yes{
@@ -96,12 +84,12 @@ button{
   color:white;
 }
 
-/* Hearts */
+/* HEARTS */
 .heart{
   position:absolute;
-  color:#ffb6d5;
+  color:#ffd1e8;
   animation:fly 6s linear infinite;
-  opacity:0.7;
+  opacity:0.6;
 }
 
 @keyframes fly{
@@ -109,19 +97,14 @@ button{
   20%{opacity:0.8}
   100%{transform:translateY(-10vh);opacity:0}
 }
-
-/* Final glow */
-.final h1{
-  text-shadow:0 0 25px #ffd1e8,0 0 50px #ff99c8;
-}
 </style>
 </head>
 
 <body>
 
-<!-- Hearts -->
+<!-- FLOATING HEARTS -->
 <script>
-for(let i=0;i<30;i++){
+for(let i=0;i<25;i++){
   let h=document.createElement("div");
   h.className="heart";
   h.innerHTML="❤️";
@@ -134,48 +117,68 @@ for(let i=0;i<30;i++){
 
 <!-- PAGE 1 -->
 <div class="page active">
-  <div class="bears">
-    <div class="bear">🐻‍❄️</div>
-    <div class="bear girl">🧸</div>
-  </div>
-  <h1>Do You Love Me? ❤️</h1>
-  <div class="buttons">
-    <button class="yes" onclick="nextPage()">Yes</button>
-    <button class="no" onmouseover="escape(this)">No</button>
+  <div class="center">
+    <h1>Do You Love Me? ❤️</h1>
+    <div class="buttons">
+      <button class="yes" onclick="nextPage()">Yes</button>
+      <button class="no">No</button>
+    </div>
   </div>
 </div>
 
 <!-- PAGE 2 -->
 <div class="page">
-  <h1>
-    I knew it 🤭<br><br>
-    I love you too my Love 😘<br><br>
-    You wanna know why?
-  </h1>
-  <div class="buttons">
-    <button class="yes" onclick="nextPage()">Yes</button>
-    <button class="no" onmouseover="escape(this)">No</button>
+  <div class="center">
+    <h1>
+      I knew it 🤭<br>
+      I love you too my Love 😘<br><br>
+      You wanna know why?
+    </h1>
+    <div class="buttons">
+      <button class="yes" onclick="nextPage()">Yes</button>
+      <button class="no">No</button>
+    </div>
   </div>
 </div>
 
-<!-- Compliments -->
-<div class="page"><h1>Your smile heals my heart 💖</h1><button class="yes" onclick="nextPage()">Next</button></div>
-<div class="page"><h1>You are my peace 🫶</h1><button class="yes" onclick="nextPage()">Next</button></div>
-<div class="page"><h1>Your presence completes me ✨</h1><button class="yes" onclick="nextPage()">Next</button></div>
-<div class="page"><h1>You are my forever choice ❤️</h1><button class="yes" onclick="nextPage()">Next</button></div>
-<div class="page"><h1>Loving you feels like home 🏡</h1><button class="yes" onclick="nextPage()">Next</button></div>
-
-<!-- FINAL -->
-<div class="page final">
-  <div class="bears">
-    <div class="bear">🐻‍❄️</div>
-    <div class="bear girl">🧸</div>
+<!-- COMPLIMENT PAGES -->
+<div class="page">
+  <div class="center">
+    <h1>Your smile heals my heart 💖</h1>
+    <button class="yes" onclick="nextPage()">Next</button>
   </div>
-  <h1>
-    Rimsha, I can’t imagine my life without you now.<br><br>
-    I need you at any cost, no matter what happens.<br><br>
-    Your presence is the only thing that heals me now.
-  </h1>
+</div>
+
+<div class="page">
+  <div class="center">
+    <h1>You are my peace 🫶</h1>
+    <button class="yes" onclick="nextPage()">Next</button>
+  </div>
+</div>
+
+<div class="page">
+  <div class="center">
+    <h1>Your presence completes me ✨</h1>
+    <button class="yes" onclick="nextPage()">Next</button>
+  </div>
+</div>
+
+<div class="page">
+  <div class="center">
+    <h1>Loving you feels like home 🏡</h1>
+    <button class="yes" onclick="nextPage()">Next</button>
+  </div>
+</div>
+
+<!-- FINAL PAGE -->
+<div class="page">
+  <div class="center">
+    <h1 class="small-text">
+      Rimsha, I can’t imagine my life without you now.<br><br>
+      I need you at any cost, no matter what happens.<br><br>
+      Your presence is the only thing that heals me now.
+    </h1>
+  </div>
 </div>
 
 <script>
@@ -188,10 +191,21 @@ function nextPage(){
   pages[current].classList.add('active');
 }
 
-function escape(btn){
-  btn.style.transform =
-    `translate(${Math.random()*80-40}px,${Math.random()*40-20}px)`;
+/* NO BUTTON ESCAPES FOREVER UNTIL YES */
+function enableEscape(btn){
+  function move(){
+    const x=Math.random()*160-80;
+    const y=Math.random()*120-60;
+    btn.style.transform=`translate(${x}px,${y}px)`;
+  }
+  btn.addEventListener("mouseenter",move);
+  btn.addEventListener("touchstart",move);
 }
+
+/* APPLY TO ALL NO BUTTONS */
+document.querySelectorAll('.no').forEach(btn=>{
+  enableEscape(btn);
+});
 </script>
 
 </body>
