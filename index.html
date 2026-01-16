@@ -14,7 +14,7 @@
 }
 
 body{
-  background:#b0005a; /* DARK PINK */
+  background:#b0005a;
   color:#ffffff;
   overflow:hidden;
 }
@@ -36,14 +36,21 @@ body{
   pointer-events:auto;
 }
 
-/* CENTER BLOCK */
+/* CENTER CONTENT */
 .center{
   text-align:center;
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:30px;
+  gap:25px;
   padding:20px;
+}
+
+/* BEARS (GLOBAL) */
+.bears{
+  display:flex;
+  gap:35px;
+  font-size:4.8rem;
 }
 
 /* TEXT */
@@ -53,7 +60,7 @@ h1{
   max-width:90vw;
 }
 
-/* SMALL TEXT FOR LAST PAGE */
+/* SMALL TEXT FOR LAST PAGES */
 .small-text{
   font-size:2rem;
   line-height:1.5;
@@ -118,6 +125,7 @@ for(let i=0;i<25;i++){
 <!-- PAGE 1 -->
 <div class="page active">
   <div class="center">
+    <div class="bears">🐻‍❄️ 🧸</div>
     <h1>Do You Love Me? ❤️</h1>
     <div class="buttons">
       <button class="yes" onclick="nextPage()">Yes</button>
@@ -129,6 +137,7 @@ for(let i=0;i<25;i++){
 <!-- PAGE 2 -->
 <div class="page">
   <div class="center">
+    <div class="bears">🐻‍❄️ 🧸</div>
     <h1>
       I knew it 🤭<br>
       I love you too my Love 😘<br><br>
@@ -144,6 +153,7 @@ for(let i=0;i<25;i++){
 <!-- COMPLIMENT PAGES -->
 <div class="page">
   <div class="center">
+    <div class="bears">🐻‍❄️ 🧸</div>
     <h1>Your smile heals my heart 💖</h1>
     <button class="yes" onclick="nextPage()">Next</button>
   </div>
@@ -151,6 +161,7 @@ for(let i=0;i<25;i++){
 
 <div class="page">
   <div class="center">
+    <div class="bears">🐻‍❄️ 🧸</div>
     <h1>You are my peace 🫶</h1>
     <button class="yes" onclick="nextPage()">Next</button>
   </div>
@@ -158,6 +169,7 @@ for(let i=0;i<25;i++){
 
 <div class="page">
   <div class="center">
+    <div class="bears">🐻‍❄️ 🧸</div>
     <h1>Your presence completes me ✨</h1>
     <button class="yes" onclick="nextPage()">Next</button>
   </div>
@@ -165,18 +177,32 @@ for(let i=0;i<25;i++){
 
 <div class="page">
   <div class="center">
+    <div class="bears">🐻‍❄️ 🧸</div>
     <h1>Loving you feels like home 🏡</h1>
     <button class="yes" onclick="nextPage()">Next</button>
   </div>
 </div>
 
-<!-- FINAL PAGE -->
+<!-- EMOTIONAL PAGE -->
 <div class="page">
   <div class="center">
+    <div class="bears">🐻‍❄️ 🧸</div>
     <h1 class="small-text">
       Rimsha, I can’t imagine my life without you now.<br><br>
       I need you at any cost, no matter what happens.<br><br>
       Your presence is the only thing that heals me now.
+    </h1>
+  </div>
+</div>
+
+<!-- FINAL DUA PAGE -->
+<div class="page">
+  <div class="center">
+    <div class="bears">🐻‍❄️ 🧸</div>
+    <h1 class="small-text">
+      May Allah bless our bond, keep us together always,<br>
+      and let our love continue to grow forever.<br><br>
+      Love you so much Jaan 🥹❤️
     </h1>
   </div>
 </div>
@@ -191,7 +217,7 @@ function nextPage(){
   pages[current].classList.add('active');
 }
 
-/* NO BUTTON ESCAPES FOREVER UNTIL YES */
+/* NO BUTTON ESCAPES UNTIL YES */
 function enableEscape(btn){
   function move(){
     const x=Math.random()*160-80;
@@ -202,7 +228,6 @@ function enableEscape(btn){
   btn.addEventListener("touchstart",move);
 }
 
-/* APPLY TO ALL NO BUTTONS */
 document.querySelectorAll('.no').forEach(btn=>{
   enableEscape(btn);
 });
