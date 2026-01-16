@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Rimsha ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+  background: radial-gradient(circle at top, #2b0a3d, #0b0014);
+  color:white;
+  overflow:hidden;
+}
+
+/* Pages */
+.page{
+  position:absolute;
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:30px;
+  opacity:0;
+  transform:scale(1.1);
+  transition:1s ease;
+  pointer-events:none;
+}
+
+.page.active{
+  opacity:1;
+  transform:scale(1);
+  pointer-events:auto;
+}
+
+/* Text */
+h1{
+  font-size:3.2rem;
+  max-width:900px;
+  line-height:1.4;
+}
+
+p{
+  font-size:2rem;
+  max-width:850px;
+  margin-top:20px;
+}
+
+/* Button */
+button{
+  margin-top:40px;
+  padding:15px 45px;
+  font-size:1.3rem;
+  border:none;
+  border-radius:40px;
+  background:linear-gradient(45deg,#ff4f9a,#ff8fc7);
+  color:white;
+  cursor:pointer;
+  box-shadow:0 0 25px #ff5fa2;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 45px #ff86c2;
+}
+
+/* Bears */
+.bears{
+  display:flex;
+  gap:40px;
+  margin-bottom:40px;
+}
+
+.bear{
+  font-size:5rem;
+  animation:float 4s ease-in-out infinite;
+}
+
+.bear.girl{
+  animation-delay:2s;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-15px)}
+}
+
+/* Hearts */
+.heart{
+  position:absolute;
+  color:#ff5fa2;
+  font-size:20px;
+  animation:fly 6s linear infinite;
+  opacity:0.7;
+}
+
+@keyframes fly{
+  0%{
+    transform:translateY(100vh) scale(0.5);
+    opacity:0;
+  }
+  20%{opacity:0.8}
+  100%{
+    transform:translateY(-10vh) scale(1.2);
+    opacity:0;
+  }
+}
+
+/* Final page glow */
+.final h1{
+  text-shadow:0 0 20px #ff86c2, 0 0 40px #ff5fa2;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Hearts -->
+<script>
+for(let i=0;i<40;i++){
+  let h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML="❤️";
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDuration=4+Math.random()*4+"s";
+  h.style.fontSize=15+Math.random()*25+"px";
+  document.body.appendChild(h);
+}
+</script>
+
+<!-- PAGE 1 -->
+<div class="page active">
+  <div class="bears">
+    <div class="bear">🐻‍❄️</div>
+    <div class="bear girl">🧸</div>
+  </div>
+  <h1>Rimsha… ❤️</h1>
+  <p>This world pauses the moment you open this.</p>
+  <button onclick="nextPage()">Continue</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+  <h1>You are not just beautiful</h1>
+  <p>You are comfort, peace and warmth — all in one soul</p>
+  <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page">
+  <h1>Your smile</h1>
+  <p>Has the power to silence my worst days</p>
+  <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page">
+  <h1>I never believed in destiny</h1>
+  <p>Until life quietly placed you in my hands</p>
+  <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page">
+  <h1>With you</h1>
+  <p>Even silence feels meaningful and safe</p>
+  <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page">
+  <h1>You are my favorite thought</h1>
+  <p>Morning, night, and every breath in between</p>
+  <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 7 -->
+<div class="page">
+  <h1>Loving you</h1>
+  <p>Feels natural — like something my soul waited for</p>
+  <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 8 -->
+<div class="page">
+  <h1>You changed me</h1>
+  <p>Not by force, but by love</p>
+  <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 9 -->
+<div class="page">
+  <h1>I see my future</h1>
+  <p>Every time I see your name</p>
+  <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- FINAL PAGE -->
+<div class="page final">
+  <div class="bears">
+    <div class="bear">🐻‍❄️</div>
+    <div class="bear girl">🧸</div>
+  </div>
+  <h1>
+    Rimsha, I can’t imagine my life without you now.<br><br>
+    I need you at any cost, no matter what happens.<br><br>
+    Your presence is the only thing that heals me now.
+  </h1>
+</div>
+
+<script>
+let pages=document.querySelectorAll('.page');
+let current=0;
+
+function nextPage(){
+  pages[current].classList.remove('active');
+  current++;
+  if(current<pages.length){
+    pages[current].classList.add('active');
+  }
+}
+</script>
+
+</body>
+</html>
